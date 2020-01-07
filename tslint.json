@@ -1,0 +1,28 @@
+{
+  "extends": "tslint-config-standard",
+  "globals": {
+    "require": true
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "src/assets/vendors/**"
+    ],
+    "typeCheck": true
+  },
+  "rules": {
+    "no-empty": false,
+    "variable-name": false,
+    "no-floating-promises": false,
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "space-before-function-paren": [
+      true,
+      {
+        "method": "never"
+      }
+    ]
+  }
+}
