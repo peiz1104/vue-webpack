@@ -30,7 +30,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.runtime.esm.js',
       '@': path.resolve(__dirname, '../src'),
       'assets': resolve('src/assets'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      public: resolve('src/assets')
     },
     extensions: ['*', '.js', '.json', '.vue', '.ts', '.tsx']
   },
@@ -126,6 +127,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10240,
+              esModule: false,
               fallback: {
                 loader: 'file-loader',
                 options: {
@@ -135,7 +137,6 @@ module.exports = {
             }
           }
         ],
-        include: [path.resolve(__dirname, 'src/assets/images')],
         exclude: /node_modules/
       },
       {
